@@ -84,6 +84,9 @@ If you find our work useful in your research or publications, please consider ci
 
 #### Test on standard SR benchmark
 
+LR: low resolution
+SR: super resolution
+
 1. If you have cloned this repository and downloaded our pre-trained models, you can first download SR benchmark (Set5, Set14, B100, Urban100 and Manga109) from [GoogleDrive](https://drive.google.com/file/d/1fC0AeoCLK8Oo3utnVa3E_r_45sJla4d1/view) or [BaiduYun](https://pan.baidu.com/s/1pTw5EE-N-GclI7Yj5SnnOA)(code:z6nz).
 
 2. Run `./results/Prepare_TestData_HR_LR.m` in Matlab to generate HR/LR images with different degradation models.

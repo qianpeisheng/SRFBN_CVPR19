@@ -39,6 +39,8 @@ class LRHRDataset(data.Dataset):
         if self.train:
             lr, hr = self._get_patch(lr, hr)
         lr_tensor, hr_tensor = common.np2Tensor([lr, hr], self.opt['rgb_range'])
+        # lr_tensor = lr_tensor
+        # hr_tensor = hr_tensor # debug nan sup contrast loss
         return {'LR': lr_tensor, 'HR': hr_tensor, 'LR_path': lr_path, 'HR_path': hr_path}
 
 

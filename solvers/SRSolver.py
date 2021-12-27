@@ -12,6 +12,7 @@ from networks import create_model
 from .base_solver import BaseSolver
 from networks import init_weights
 from utils import util
+from .losses import SupConLoss
 
 class SRSolver(BaseSolver):
     def __init__(self, opt):
@@ -43,6 +44,8 @@ class SRSolver(BaseSolver):
                 self.criterion_pix = nn.L1Loss()
             elif loss_type == 'l2':
                 self.criterion_pix = nn.MSELoss()
+            elif loss_type == 'sup':
+                self.criterion_pix = SupConLoss()
             else:
                 raise NotImplementedError('Loss type [%s] is not implemented!'%loss_type)
 
